@@ -14,13 +14,17 @@ namespace Classified.Controllers
 
         //get all items
         //api/classified/get
-        public IEnumerable<Listing> GetAllItems()
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public IEnumerable<Listing> RetrieveAllItems()
         {
             return Repository.Retrieve();
         }
 
         //add an item
         //api/classified/post
+        [AcceptVerbs("POST")]
+        [HttpPost]
         public HttpResponseMessage PostItem(Listing item)
         {
             item = Repository.Create(item);
@@ -33,6 +37,8 @@ namespace Classified.Controllers
 
         //edit an item
         //api/classified/put
+        [AcceptVerbs("PUT")]
+        [HttpPut]
         public void PutItem(int classifiedId, Listing item)
         {
             item.ClassifiedId = classifiedId;
@@ -44,6 +50,8 @@ namespace Classified.Controllers
 
         //remove user
         //api/classified/delete
+        [AcceptVerbs("DELETE")]
+        [HttpDelete]
         public void DeleteItem(int classifiedId)
         {
             var item = Repository.GetItemById(classifiedId)     ;
@@ -56,6 +64,9 @@ namespace Classified.Controllers
 
         //get an item by Id
         //api/classified/get
+        //[Route("GetListedItemById")]
+        [AcceptVerbs("GET")]
+        [HttpGet]
         public Listing GetListedItemById(int classifiedId)
         {
             var item = Repository.GetItemById(classifiedId);
@@ -64,6 +75,15 @@ namespace Classified.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             return item;
+        }
+
+        //get all categories
+        //api/classified/getallcategories
+        [AcceptVerbs("GET")]
+        [HttpGet]
+        public IEnumerable<Category> RetrieveAllCategories()
+        {
+            return Repository.RetrieveAllCategories();
         }
     }
 }

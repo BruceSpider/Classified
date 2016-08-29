@@ -15,5 +15,9 @@ namespace Classified.Models
         bool Delete(int classifiedId);
         //More
         Listing GetItemById(int classifiedId);
+
+        //Categories
+
+        IEnumerable<Category> RetrieveAllCategories();
     }
 }

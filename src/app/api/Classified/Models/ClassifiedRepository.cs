@@ -131,6 +131,36 @@ namespace Classified.Models
             }
             return item;
         }
+        //
+
+        public IEnumerable<Category> RetrieveAllCategories()
+        {
+            var categories = new List<Category>();
+            var query = "SELECT C.CATEGORY, SC.[SUBCATEGORYNAME] FROM  [CLASSIFIED].[DBO].[SUBCATEGORY] SC INNER JOIN[CLASSIFIED].[DBO].[CATEGORY] C ON C.ID = SC.CATEGORYID";
+
+            var conString = GetConnectionString();
+            using (var con = new SqlConnection(conString))
+            {
+                using (var cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    var reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        var category = new Category
+                        {
+                            CategoryName = reader.GetString(0),
+                            SubCategoryName = reader.GetString(1)
+                        };
+
+                        categories.Add(category);
+                    }
+                    con.Close();
+                }
+            }
+            return categories.ToArray();
+        }
 
     }
 }

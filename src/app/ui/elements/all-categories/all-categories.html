@@ -1,0 +1,16 @@
+<dom-module id="all-categories">
+    <link href="all-categories.css" rel="stylesheet" />
+    <template>
+        <h4>Categories</h4>
+        <template is="dom-repeat" items="[[categories]]">
+            <span>{{item.CategoryName}}</span>
+        </template>
+         <iron-ajax
+            id="requestCategories"
+            url="http://localhost:41449/api/classified/RetrieveAllCategories"
+            handle-as="json"
+            on-response="handleResponse">
+        </iron-ajax>
+    </template>
+    <script src="all-categories.js"></script>
+</dom-module>
