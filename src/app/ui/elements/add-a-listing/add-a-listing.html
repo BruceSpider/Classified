@@ -1,0 +1,105 @@
+<dom-module id="add-a-listing">
+    <link href="add-a-listing.css" rel="stylesheet" />
+    <template>
+        <h3>Add new item</h3>
+        <a>Please fill out the following details to list your item.</a>
+        <br/>
+        <br/>
+        <span><b>Listing Type</b> - Please  select whether your listing is For Sale, Wanted or a Notice.</span>
+        <br/>
+        <div>
+            <paper-dropdown-menu label="Listing Type">
+                <paper-listbox class="dropdown-content">
+                    <paper-item>For Sale</paper-item>
+                    <paper-item>Wanted</paper-item>
+                    <paper-item>Notice</paper-item>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </div>
+        <br/>
+        <span><b>Category</b> - Select a more accurate category for this listing</span>
+        <br/>
+        <div>
+            <paper-dropdown-menu label="Category">
+                <paper-listbox class="dropdown-content">
+                    <paper-item>LifeStyle</paper-item>
+                    <paper-item>High Tech</paper-item>
+                    <paper-item>Cars</paper-item>
+                    <paper-item>House/Home</paper-item>
+                    <paper-item>Sports</paper-item>
+                    <paper-item>Wanted</paper-item>
+                    <paper-item>Travel</paper-item>
+                    <paper-item>Personals</paper-item>
+                    <paper-item>Music/Movies</paper-item>
+                    <paper-item>Notices</paper-item>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </div>
+        <br/>
+        <span><b>Expiry</b> - Select an amount of days to list this item. Note, you will have a chance to reset the expiry before this item is deleted.</span>
+        <br/>
+        <div>
+            <paper-dropdown-menu label="Expiry">
+                <paper-listbox class="dropdown-content">
+                    <paper-item>1</paper-item>
+                    <paper-item>2</paper-item>
+                    <paper-item>3</paper-item>
+                    <paper-item>4</paper-item>
+                    <paper-item>5</paper-item>
+                    <paper-item>6</paper-item>
+                    <paper-item>7</paper-item>
+                    <paper-item>8</paper-item>
+                    <paper-item>9</paper-item>
+                    <paper-item>10</paper-item>
+                    <paper-item>11</paper-item>
+                    <paper-item>12</paper-item>
+                    <paper-item>13</paper-item>
+                    <paper-item>14</paper-item>
+                    <paper-item>15</paper-item>
+                    <paper-item>16</paper-item>
+                    <paper-item>17</paper-item>
+                    <paper-item>18</paper-item>
+                    <paper-item>19</paper-item>
+                    <paper-item>20</paper-item>
+                    <paper-item>21</paper-item>
+                    <paper-item>22</paper-item>
+                    <paper-item>23</paper-item>
+                    <paper-item>24</paper-item>
+                    <paper-item>25</paper-item>
+                    <paper-item>26</paper-item>
+                    <paper-item>27</paper-item>
+                    <paper-item>28</paper-item>
+                    <paper-item>29</paper-item>
+                    <paper-item>30</paper-item>
+                </paper-listbox>
+            </paper-dropdown-menu>
+        </div>
+        <br/>
+        <span><b>Description</b> - Please provide a description of the item. Try to be as descriptive as possible, but keep length to a minimum. Try to place brand names and model numbers at the beginning as these will be most visible in displays limited to 40 characters. </span>
+        <br/>
+        <div>
+            <paper-input label="Description"></paper-input>
+        </div>
+        <br/>
+        <span><b>Price</b> - Enter a price for this item. (For notices leave this as zero, for wanted you may it as zero or enter an amount that you are willing tp pay.)</span>
+        <br/>
+        <div>
+            <paper-input label="Price" type="number">
+                <div prefix>R&nbsp;</div>
+            </paper-input>
+        </div>
+        <br/>
+        <span><b>Image Attachment</b> - If you would like to attach an image to this item please do so. Please stick to common image formats such as GIF, JPG, or BMP as others may not display propertly in the browser.</span>
+        <br/>
+        <div>
+            <paper-button raised>Browse...</paper-button>
+        </div>
+        <br/>
+        <span></span>
+        <br/>
+        <div>
+            <paper-button raised>Submit</paper-button>
+        </div>
+    </template>
+    <script src="add-a-listing.js"></script>
+</dom-module>
