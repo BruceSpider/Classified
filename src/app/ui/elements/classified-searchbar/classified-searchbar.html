@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="classified-searchbar.css">
+
+<dom-module id="classified-searchbar">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 10px 20px;
+      }
+    </style>
+	<div style="width:96%; padding-left:2%">
+	  <paper-input label="search!" type="search" placeholder="search for classified" autosave="test" results="5">
+		<paper-icon-button suffix icon="send"></paper-icon-button>
+	  </paper-input>
+	</div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'classified-searchbar'
+	  
+    });
+  </script>
+</dom-module>

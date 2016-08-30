@@ -8,30 +8,41 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<link rel="import" href="../lib/bower_components/polymer/polymer.html">
-<link rel="import" href="shared-styles.html">
+<link rel="import" href="../shared-styles.html">
 
-<dom-module id="my-view2">
+<dom-module id="menu-home">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-
         padding: 10px;
       }
     </style>
-
+	
     <div class="card">
-      <div class="circle">2</div>
-      <h1>View Two</h1>
-      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
-      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+      <div class="circle"><span class="circle-home">Home</span></div>
+      <strong class="description-header">Home | Classifieds</strong>
+      <navigation-tabs></navigation-tabs>
+	  <classified-searchbar></classified-searchbar>
     </div>
+	
+	<div class="card">
+      <strong class="show-details-font">Content</strong><br/>
+	  <a href="#" class="show-details">Show All Categories</a>
+    </div>
+	
+	<div class="card">
+      <strong class="show-details-font">MOST ACTIVE ITEMS</strong><br/>
+	  <div class="container">
+		<plugin-content></plugin-content>
+	  </div>
+    </div>
+	
   </template>
 
   <script>
     Polymer({
-      is: 'my-view2'
+      is: 'menu-home'
     });
   </script>
 </dom-module>

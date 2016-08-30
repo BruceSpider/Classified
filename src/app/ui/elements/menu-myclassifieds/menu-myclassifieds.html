@@ -8,30 +8,28 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
+
 <link rel="import" href="../shared-styles.html">
 
-<dom-module id="menu-addlisting">
+<dom-module id="menu-myclassifieds">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
-
         padding: 10px;
       }
     </style>
 
     <div class="card">
-      <div class="circle"><span class="circle-listing">Add</span></div>
-      <strong class="description-header">Add A Listing</strong>
-      
-      <add-a-listing></add-a-listing>
+      <div class="circle"><span class="circle-my-classified">My C</span></div>
+      <strong class="description-header">My Classifieds</strong>
       
     </div>
   </template>
 
   <script>
     Polymer({
-      is: 'menu-addlisting'
+      is: 'menu-myclassifieds'
     });
   </script>
 </dom-module>
